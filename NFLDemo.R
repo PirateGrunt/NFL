@@ -1,5 +1,5 @@
-source(https://raw.github.com/PirateGrunt/NFL/master/GetNFLData.R)
-source(https://raw.github.com/PirateGrunt/NFL/master/AdjustNFLData.R)
+source("https://raw.github.com/PirateGrunt/NFL/master/GetNFLData.R")
+source("https://raw.github.com/PirateGrunt/NFL/master/AdjustNFLData.R")
 
 df = GetTeamSeasonResults (2000:2011, "nyj")
 dfGames = GetNFLData(years=2000:2011)
