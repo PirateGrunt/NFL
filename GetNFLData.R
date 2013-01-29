@@ -90,8 +90,28 @@ GetTeamTranslator = function()
                 , "Atlanta Falcons", "Tampa Bay Buccaneers", "New Orleans Saints", "Carolina Panthers"
                 , "San Francisco 49ers", "Seattle Seahawks", "St. Louis Rams", "Arizona Cardinals")
   
-  df = data.frame(Abbreviation = teams, TeamName = teamNames)
+  df = data.frame(Abbreviation = teams, TeamName = teamNames, stringsAsFactors = FALSE)
   
   return (df)
 }
 
+GetTeamNameCleanup = function()
+{
+  OldName = c("St. Louis Cardinals"
+              , "Houston Oilers"
+              , "Los Angeles Rams"
+              , "Los Angeles Raiders"
+              , "Phoenix Cardinals"
+              , "Tennessee Oilers")
+  
+  CurrentName = c("Arizona Cardinals"
+              , "Tennessee Titans"
+              , "St. Louis Rams"
+              , "Oakland Raiders"
+              , "Arizona Cardinals"
+              , "Tennessee Titans")
+  
+  df = data.frame(OldName = OldName, CurrentName = CurrentName, stringsAsFactors = FALSE)
+  
+  return (df)
+}
